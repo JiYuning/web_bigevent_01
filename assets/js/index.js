@@ -36,14 +36,14 @@ function getUserInfo() {
             renderAvatar(res.data)
         },
         // 成功或者失败都会触发complete方法
-        complete: function (res) {
-            if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-                // 清空本地token
-                localStorage.removeItem('token')
-                // 页面跳转
-                location.href = '/login.html'
-            }
-        }
+        /*  complete: function (res) {
+             if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+                 // 清空本地token
+                 localStorage.removeItem('token')
+                 // 页面跳转
+                 location.href = '/login.html'
+             }
+         } */
     })
 }
 
